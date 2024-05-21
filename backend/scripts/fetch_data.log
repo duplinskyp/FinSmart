@@ -1,0 +1,44 @@
+DEBUG:root:Fetching Alpha Vantage data for AAPL
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.alphavantage.co:443
+DEBUG:urllib3.connectionpool:https://www.alphavantage.co:443 "GET /query?function=TIME_SERIES_DAILY&symbol=AAPL&apikey=CSALKE1VWKYJREP6 HTTP/1.1" 200 None
+DEBUG:root:Alpha Vantage response: {
+    "Meta Data": {
+        "1. Information": "Daily Prices (open, high, low, close) and Volumes",
+        "2. Symbol": "AAPL",
+        "3. Last Refreshed": "2024-05-21",
+        "4. Output Size": "Compact",
+        "5. Time Zone": "US/Eastern"
+    },
+    "Time Series (Daily)": {
+        "2024-05-21": {
+            "1. open": "191.0900",
+            "2. high": "192.7300",
+            "3. low": "190.9201",
+            "4. close": "192.3500",
+            "5. volume": "42191151"
+        },
+        "2024-05-20": {
+            "1. open": "189.3250",
+            "2. high": "191.9199",
+            "3. low": "189.0100",
+            "4. close": "191.0400",
+            "5. volume": "44361275"
+        },
+        "2024-05-17": {
+            "1. open": "189.5100",
+            "2. high": "190.8100",
+            "3. low": "189.1800",
+            "4. close": "189.8700",
+            "5. volume": "41282925"
+        },
+        "2024-05-16": {
+            "1. open": "190.4700",
+            "2. high": "19
+DEBUG:root:Fetching IEX Cloud data for AAPL
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cloud.iexapis.com:443
+DEBUG:urllib3.connectionpool:https://cloud.iexapis.com:443 "GET /stable/stock/AAPL/quote?token=pk_0604f4f2b4bd42199934e2d961034f68 HTTP/1.1" 200 None
+DEBUG:root:IEX Cloud response: {"avgTotalVolume":62725330,"calculationPrice":"iexlasttrade","change":1.33,"changePercent":0.00696,"close":null,"closeSource":"official","closeTime":null,"companyName":"Apple Inc","currency":"USD","delayedPrice":null,"delayedPriceTime":null,"extendedChange":null,"extendedChangePercent":null,"extendedPrice":null,"extendedPriceTime":null,"high":null,"highSource":null,"highTime":null,"iexAskPrice":0,"iexAskSize":0,"iexBidPrice":0,"iexBidSize":0,"iexClose":192.37,"iexCloseTime":1716321599796,"iexLastUpdated":1716321599796,"iexMarketPercent":0.013317679175969075,"iexOpen":191.085,"iexOpenTime":1716298201126,"iexRealtimePrice":192.37,"iexRealtimeSize":100,"iexVolume":561888,"lastTradeTime":1716321599993,"latestPrice":192.37,"latestSource":"IEX Last Trade","latestTime":"May 21, 2024","latestUpdate":1716321599796,"latestVolume":null,"low":null,"lowSource":null,"lowTime":null,"marketCap":2949817354340,"oddLotDelayedPrice":null,"oddLotDelayedPriceTime":null,"open":null,"openTime":null,"openSourc
+DEBUG:root:Fetching Nasdaq data for AAPL
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data.nasdaq.com:443
+DEBUG:urllib3.connectionpool:https://data.nasdaq.com:443 "GET /api/v3/datasets/WIKI/AAPL.json?api_key=roYRm2ZN8XvkQiW1ESbj HTTP/1.1" 200 None
+DEBUG:root:Nasdaq response: {"dataset":{"id":9775409,"dataset_code":"AAPL","database_code":"WIKI","name":"Apple Inc (AAPL) Prices, Dividends, Splits and Trading Volume","description":"End of day open, high, low, close and volume, dividends and splits, and split/dividend adjusted open, high, low close and volume for Apple Inc. (AAPL). Ex-Dividend is non-zero on ex-dividend dates. Split Ratio is 1 on non-split dates. Adjusted prices are calculated per CRSP (\u003ca href=\"http://www.crsp.com/products/documentation/crsp-calculations\" rel=\"nofollow\" target=\"blank\"\u003ewww.crsp.com/products/documentation/crsp-calculations\u003c/a\u003e)\r\n\r\n\u003cp\u003eThis data is in the public domain. You may copy, distribute, disseminate or include the data in other products for commercial and/or noncommercial purposes.\u003c/p\u003e\r\n\u003cp\u003eThis data is part of Quandl's Wiki initiative to get financial data permanently into the public domain. Quandl relies on users like you to flag errors and provide data where d
